@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{.PageTitle}}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.1.0/dist/siimple.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script type="text/javascript" src="/static/js/script.js"></script>
+</head>
+
+<body>
+  <div class="siimple-jumbotron siimple-jumbotron--{{.BoxColor}} siimple-jumbotron--fluid" align="center">
+    <div class="siimple-jumbotron-title">{{.Emoji.Character}}️</div>
+    <div class="siimple-jumbotron-subtitle"><strong>Сари</strong> е {{.Adjective}} {{.Emoji.Name}}!</div>
+    <div class="siimple-jumbotron-detail">А <strong>velislav</strong> го {{.Verb}}.</div>
+    <div class="siimple-btn siimple-btn--{{.BtnColor}}" id="reload_btn" onClick="window.location.reload()">Ново</div>
+  </div>
+  <div class="siimple-content siimple-content--fluid" align="center">
+    <div class="siimple-p" id="choose_a_chore">Днес <strong>velislav</strong> ще <span id="chore">{{.Chore.Text}}</span></div>
+  	{{if not .Chore.Drawn}}
+  	  <div class="siimple-btn siimple-btn--primary" id="choose_a_chore_btn" onClick="ChooseAChore()">Изтегли</div>
+  	{{end}}
+  </div>
+  <div class="siimple-footer" align="center">
+    Made with love by <strong>velislav</strong>
+  </div>
+</body>
+
+</html>
