@@ -1,6 +1,6 @@
 function ChooseAChore() {
-	var chooseAChoreBtn = document.getElementById("choose_a_chore_btn");
-  chooseAChoreBtn.setAttribute('class', 'siimple-spinner siimple-spinner--primary');
+ 	var chooseAChoreBtn = document.getElementById("choose_a_chore_btn");
+	chooseAChoreBtn.setAttribute('class', 'siimple-spinner siimple-spinner--primary');
 
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange=function() {
